@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+      font-family: 'Hanken', sans-serif;
+    }
+
+    .grid1 {
+      text-align: center;
+      background: #6742ff;
+      background-image: -webkit-linear-gradient(top, #6742ff, #332be9);
+      background-image: -moz-linear-gradient(top, #6742ff, #332be9);
+      background-image: -ms-linear-gradient(top, #6742ff, #332be9);
+      background-image: -o-linear-gradient(top, #6742ff, #332be9);
+      background-image: linear-gradient(to bottom, #6742ff, #332be9);
+      grid-column-start: 2;
+      grid-row-start: 2;
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      border-radius: 5%;
+    }
+
+    .grid2 {
+      padding: 10% 0 10% 10%;
+      grid-column-start: 3;
+      grid-row-start: 2;
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      border-radius: 0 5% 5% 0;
+      box-shadow: 10px 20px 10px 1px #f1f3fb;
+    }
+
+    .grid2-head {
+      display: grid;
+      grid-template-columns: auto;
+      font-size: x-large;
+    }
+
+    .grid2-body {
+      display: grid;
+      gap: 10px;
+      grid-template-rows: repeat(4, auto);
+      padding: 10% 10% 10% 0;
+    }
+
+    .grid2-body p {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    img {
+      float: left;
+    }
+
+    .score {
+      float: right;
+      color: grey;
+    }
+
+    .l-title {
+      display: grid;
+      grid-template-columns: auto;
+      margin-top: 10%;
+      margin-bottom: 0;
+      color: #c9c3ff;
+      font-size: x-large;
+    }
+
+    .circleBg {
+      display: grid;
+      grid-template-rows: auto auto;
+      background: #4e22ca;
+      align-content: center;
+      background-image: -webkit-linear-gradient(top, #4e22ca, #4734ef);
+      background-image: -moz-linear-gradient(top, #4e22ca, #4734ef);
+      background-image: -ms-linear-gradient(top, #4e22ca, #4734ef);
+      background-image: -o-linear-gradient(top, #4e22ca, #4734ef);
+      background-image: linear-gradient(to bottom, #4e22ca, #4734ef);
+      margin: 5% auto 0;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+    .circleBg .l-score {
+      font-size: 400%;
+      color: white;
+      margin: auto;
+    }
+
+    .l-bottom {
+      display: grid;
+      grid-template-rows: auto;
+      margin: 0 auto 0;
+      width: 50%;
+      padding-bottom: 5%;
+    }
+
+    .l-bottom .l-bottom-great {
+      color: white;
+      font-size: 150%;
+      margin: 0;
+    }
+
+    .reaction {
+      background-color: #fff6f6;
+      color: #d6706d;
+      border-radius: 5%;
+    }
+
+    .memory {
+      background-color: #fffbf2;
+      color: #ecb039;
+      border-radius: 5%;
+    }
+
+    .verbal {
+      background-color: #f3fafa;
+      color: #21967b;
+      border-radius: 5%;
+    }
+
+    .visual {
+      background-color: #f3f3fd;
+      color: #000083;
+      border-radius: 5%;
+    }
+
+    .grid2-btn {
+      display: grid;
+      grid-template-columns: auto;
+      margin-right: 10%;
+      text-align: center;
+      -webkit-border-radius: 28;
+      -moz-border-radius: 28;
+      border-radius: 28px;
+      font-family: Georgia;
+      color: #ffffff;
+      font-size: 14px;
+      background: #303b59;
+
+      text-decoration: none;
+    }
+
+    .grid2-btn:hover {
+      background: #6742ff;
+      background-image: -webkit-linear-gradient(top, #6742ff, #332be9);
+      background-image: -moz-linear-gradient(top, #6742ff, #332be9);
+      background-image: -ms-linear-gradient(top, #6742ff, #332be9);
+      background-image: -o-linear-gradient(top, #6742ff, #332be9);
+      background-image: linear-gradient(to bottom, #6742ff, #332be9);
+      text-decoration: none;
+    }
+
+    .attribution {
+      display: grid;
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="grid1">
+      <div class="l-title"> Your Result</div>
+      <div class="circleBg">
+        <p class="l-score">76</p>
+        <span style="color: #8174ff;"> of 100</span>
+      </div>
+
+      <div class="l-bottom">
+        <p class="l-bottom-great"> Great</p>
+        <span style="color: #d3d1ff; font-size: small;"> You scored higher than 65% of the people who have taken these
+          tests.</span>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="grid2-head"> <strong> Summary</strong></div>
+      <div class="grid2-body">
+        <div class="reaction">
+          <p><img
+              src="images/icon-reaction.svg"
+              alt="reaction-img">&nbsp;Reaction</img>
+            <span class="score"> <strong><span style="color: black;"> 80</span></strong> / 100</span>
+          </p>
+
+        </div>
+        <div class="memory">
+          <p><img
+              src="images/icon-memory.svg"
+              alt="memory-img">&nbsp;Memory
+            <span class="score"> <strong><span style="color: black;"> 92</span></strong> / 100</span>
+          </p>
+        </div>
+        <div class="verbal">
+          <p><img
+              src="images/icon-verbal.svg"
+              alt="verbal-img">&nbsp;Verbal
+            <span class="score"> <strong><span style="color: black;"> 61</span> </strong>/ 100</span>
+          </p>
+        </div>
+        <div class="visual">
+          <p><img
+              src="images/icon-visual.svg"
+              alt="visual-img">&nbsp;Visual
+            <span class="score"> <strong><span style="color: black;"> 72</span> </strong>/ 100</span>
+          </p>
+        </div>
+      </div>
+      <div class="grid2-btn">
+        <p>Continue </p>
+      </div>
+    </div>
+    <div class="attribution">
+      <p>Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+          Mentor</a>.
+        Coded by <a href="#">jlinsangan</a>.</p>
+    </div>
+  </main>
+</body>
+
+</html>
